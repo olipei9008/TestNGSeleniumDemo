@@ -36,7 +36,7 @@ public class GoogleFinance {
      */
     public boolean areExpectedSymbolsPresent(List<String> expectedSyms) {
 
-        int count = 0;
+        int count = 0; // This count is for checking how many expected symbols were found
 
         // Keep track of what to print
         boolean[] printActual = new boolean[symsList.size()];
@@ -44,7 +44,7 @@ public class GoogleFinance {
         boolean[] printExpected = new boolean[expectedSyms.size()];
         Arrays.fill(printExpected, true);
 
-        //
+        // Go through both lists of symbols and compare
         for (int i = 0; i < expectedSyms.size(); i++) {
             for (int j = 0; j < symsList.size(); j++) {
                 if (expectedSyms.get(i).equals(symsList.get(j))) {
@@ -70,12 +70,11 @@ public class GoogleFinance {
                 System.out.print(expectedSyms.get(i) + " ");
             }
             else {
-                count++;
+                count++; // Expected symbol was found
             }
         }
         System.out.println();
 
-        System.out.println(count);
         return count == expectedSyms.size();
     }
 }

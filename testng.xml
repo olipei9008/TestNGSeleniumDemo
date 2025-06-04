@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Google Finance Suite" verbose="1">
+    <test name="Stock Symbols">
+        <classes>
+            <class name="SeleniumTests"/>
+        </classes>
+    </test>
+</suite>
